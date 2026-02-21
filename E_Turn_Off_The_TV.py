@@ -8,10 +8,11 @@ arr.sort(key=lambda x:(x[0],x[1]))
 ans=-1
 for i in range(1,len(arr)):
     if (arr[i][0]>arr[i-1][1]):
-        break
+        continue
     else:
         ans=i+1
-print(ans)
+        break
+print(ans,arr)
 
 
 
