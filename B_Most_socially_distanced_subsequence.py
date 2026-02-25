@@ -4,21 +4,21 @@ for i in range(t):
     arr=list(map(int,input().split()))
     left=0
     curr=0
-    seen=[]
-    for right in range(1,len(arr)):
-        if arr[left]>arr[right]:
-            seen.append(arr[left])
-            seen.append(arr[right])
-            left=right
-
+    seen=[arr[0]]
+    for i in range(1,len(arr)):
+        if i+1<len(arr) and arr[i-1]>arr[i]<arr[i+1]:
+            seen.append(arr[i])
+        elif i+1<len(arr)and arr[i-1]<arr[i]>arr[i+1]:
+            seen.append(arr[i])
+        elif i+1==len(arr):
+            seen.append(arr[i])
         else:
-            if right+1<len(arr) and arr[right]>arr[right+1]:
-                seen.append(arr[right])
-            else:
-                continue
+            continue
     print(len(seen))
     print(*seen)
-
+         
+    
+   
 
 
 
