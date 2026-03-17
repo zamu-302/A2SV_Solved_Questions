@@ -21,7 +21,7 @@ for i in range(len(arr)):
         if min_[0]<left:
             min_.popleft()
     count+=1
-print()
+print(2**5 - (left+len(arr)))
 
 
 
